@@ -24,9 +24,9 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set hlsearch
 hi Search guibg=Blue
 
-"Highlight lines over length 79
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+"Set indicator for max line width
+"Only works for Vim 7.3 upwards
+set colorcolumn=80
 
 "Color theme settings
 syntax enable
@@ -48,4 +48,6 @@ highlight LineNr ctermfg=darkgrey
 "--------------------------------"
 "          Key mappings          "
 "--------------------------------"
-nmap <silent> <F2> :NERDTreeToggle<CR>
+nmap <silent> <F2> :NERDTreeToggle <CR>
+nmap <silent> <F3> :Gblame <CR>
+nmap <silent> <C-h> :noh <CR>
